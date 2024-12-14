@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  
+  <title>Frontend Mentor | Four card feature section</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    body{
+      background-color: hsl(0, 0%, 98%);
+      max-width: 100%;
+      height: 100vh;
+    }
+
+    h2{
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 24px;
+    }
+
+    p{
+      font-family: "Poppins", sans-serif;
+      font-weight: 200;
+      font-size: 15px; 
+      color:hsl(0, 0%, 61%) ;
+    }
+
+    span{
+      font-family: "Poppins", sans-serif;
+      font-weight: 200;
+      font-size: 24.2px;
+    }
+
+    .main{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }   
+
+    .container{
+      width: 500px;
+      text-align: center;
+    }  
+
+    .text{
+      margin-top: 0px;
+    }
+
+    .grid{
+       display: grid;
+       grid-template-areas: 'menu header right'
+                            'menu header right'
+                            'menu footer right';
+       gap: 30px;
+       justify-content: center;
+       margin-top: 50px;
+    }
+
+    .board{
+      background-color:white;
+      border-radius: 10px;
+      border-top-style: solid;
+      border-top-width: 9px;
+      border-top-color: hsl(212, 86%, 64%);
+      width: 300px;
+      height: 270px;
+      text-align: start;  
+      padding-left: 30px;
+      padding-top: 10px;
+      padding-right: 50px;
+      box-shadow: 10px 10px 20px rgba(206, 202, 202, 0.26);
+      grid-area: menu;
+      margin-top: 40%;
+    }
+
+    .team{
+      background-color:white;
+      border-radius: 10px;
+      border-top-style: solid;
+      border-top-width: 9px;
+      border-top-color:hsl(0, 78%, 62%);
+      width: 300px;
+      height: 270px;
+      text-align: start;  
+      padding-left: 30px;
+      padding-top: 10px;
+      padding-right: 50px;
+      box-shadow: 10px 10px 20px rgba(206, 202, 202, 0.26);
+      grid-area: header;
+    }
+
+    .karma{
+      background-color:white;
+      border-radius: 10px;
+      border-top-style: solid;
+      border-top-width: 9px;
+      border-top-color: hsl(34, 97%, 64%);
+      width: 300px;
+      height: 270px;
+      text-align: start;  
+      padding-left: 30px;
+      padding-top: 10px;
+      padding-right: 50px;
+      box-shadow: 10px 10px 20px rgba(206, 202, 202, 0.26);
+      grid-area: footer;
+    }
+
+    .calcu{
+      background-color:white;
+      border-radius: 10px;
+      border-top-style: solid;
+      border-top-width: 9px;
+      border-top-color: hsl(180, 62%, 55%);
+      width: 300px;
+      height: 270px;
+      text-align: start;  
+      padding-left: 30px;
+      padding-top: 10px;
+      padding-right: 50px;
+      box-shadow: 10px 10px 20px rgba(206, 202, 202, 0.26);
+      grid-area: right;
+      margin-top: 40%;
+    }
+
+    img{
+      position: static;
+      margin-left: 250px;
+      margin-top:35px;
+    }
+
+    @media  (min-width:300px) and (max-width:768px){
+      body{
+        background-color: hsl(0, 0%, 98%);
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 40px;
+        width: auto;
+        height: 100vh;
+      }
+
+      .main{
+        text-align: center;
+      }
+
+      .container{
+        width: 400px;
+        text-align: center;
+      }
+
+      .main>.container>p{
+        font-family: "Poppins", sans-serif;
+       font-weight: 200;
+       font-size: 19.1px; 
+       color:hsl(0, 0%, 61%) ;
+      }
+
+      span{
+      font-family: "Poppins", sans-serif;
+      font-weight: 200;
+      font-size: 28px;
+    }
+
+    .text{
+      font-size: 28px;
+    }
+
+      .grid{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        width: 400px;
+      }
+
+      .board{
+        margin-top: 30px;
+      }
+
+      .calcu{
+        margin-top: 0;
+      }
+
+    }
+
+  </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+
+<div class="main">
+  <div class="container">
+    <span>Reliable, efficient delivery</span>
+    <h2 class="text">Powered by Technology</h2>
+
+    <p>Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful</p>
+
+  <div class="grid">
+    <div class="board">
+      <h2>Supervisor</h2>
+      <p>Monitors activity to identify project roadblocks</p>
+      <img src="./icon-supervisor.svg" alt="search">
+    </div>
+
+    <div class="team">
+      <h2>Team Builder</h2>
+      <p>Scans our talent network to create the optimal team for your project</p>
+      <img src="./icon-team-builder.svg" alt="build">
+    </div>
+    
+    <div class="karma">
+      <h2>Karma</h2>
+      <p>Regularly evaluates our talent to ensure quality</p>
+      <img src="./icon-karma.svg" alt="light">
+    </div>
+    
+    <div class="calcu">
+      <h2>Calculator</h2>
+      <p>Uses data from past projects to provide better delivery estimates</p>
+      <img src="./icon-calculator.svg" alt="computer">
+    </div>
+  </div>   
+</div>
+ </div>
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Emma_Ola3</a>.
+    </p>
+  </footer>
+</body>
+</html>
